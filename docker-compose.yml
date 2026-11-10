@@ -1,7 +1,0 @@
-services:
-  staticforge-site:
-    build: .
-    container_name: staticforge-site
-    ports:
-      - "8080:80"
-    restart: unless-stopped

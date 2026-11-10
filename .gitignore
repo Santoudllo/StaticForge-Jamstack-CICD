@@ -1,6 +1,0 @@
-node_modules/
-dist/
-coverage/
-public/generated/
-.env
-.DS_Store
