@@ -1,21 +1,20 @@
-# 🚀 StaticForge – Projet DevOps & CI/CD
+
+# StaticForge – Projet DevOps & CI/CD
 
 **Projet pédagogique d'industrialisation d'une application Full Stack.**
 
-Dépôt de référence : [StaticForge-Jamstack-CICD](https://github.com/Santoudllo/StaticForge-Jamstack-CICD)
+Dépôt de référence :
+https://github.com/Santoudllo/StaticForge-Jamstack-CICD
 
 ## 1. Présentation
 
 StaticForge est une application web de génération de sites statiques (Static Site Generator – SSG), basée sur une architecture inspirée de Jamstack.
 
-L'application permet de gérer des contenus Markdown et de générer automatiquement des pages HTML.
+Elle permet de gérer des contenus Markdown et de générer automatiquement des pages HTML.
 
-Elle est composée de deux parties :
-
-- **Frontend :** React et Vite.
-- **Backend :** Node.js et Express.
-
-Ce projet sert de support à un travail pratique consacré à l'industrialisation logicielle et aux pratiques DevOps.
+L'application repose sur :
+- Frontend : React et Vite.
+- Backend : Node.js et Express.
 
 ## 2. Technologies
 
@@ -23,7 +22,6 @@ Ce projet sert de support à un travail pratique consacré à l'industrialisatio
 |---|---|
 | Frontend | React, Vite |
 | Backend | Node.js, Express |
-| Contenus | Markdown |
 | Tests | Jest, Supertest |
 | Qualité | ESLint, SonarQube |
 | CI/CD | Jenkins, GitLab CI/CD |
@@ -31,78 +29,76 @@ Ce projet sert de support à un travail pratique consacré à l'industrialisatio
 | Infrastructure | Terraform, Ansible |
 | Base de données cible | PostgreSQL |
 
-## 3. Architecture générale
+## 3. Architecture
 
 ```text
-       UTILISATEUR
-            |
-            v
-      FRONTEND REACT
-            |
-            v
-       API NODE.JS
-            |
-            v
-      CONTENUS MARKDOWN
-            |
-            v
-     GENERATION HTML
-            |
-            v
-       SITE STATIQUE
+UTILISATEUR
+     |
+     v
+FRONTEND REACT
+     |
+     v
+API NODE.JS
+     |
+     v
+CONTENUS MARKDOWN
+     |
+     v
+GENERATION HTML
+     |
+     v
+SITE STATIQUE
 ```
 
 ## 4. Prérequis
 
-Avant de commencer, installer :
-
-- Node.js 20 ou supérieur.
-- npm 10 ou supérieur.
-- Git.
-- Visual Studio Code.
-- Un navigateur web.
+- Node.js 20 ou supérieur
+- npm 10 ou supérieur
+- Git
+- Visual Studio Code
+- Navigateur web
 
 ## 5. Récupération du projet
 
-Chaque étudiant doit travailler sur son propre dépôt GitHub.
+Chaque étudiant doit travailler sur son propre fork GitHub.
 
-**Étape 1 – Fork**
+### Étape 1 – Fork
 
 Accéder au dépôt :
 
 https://github.com/Santoudllo/StaticForge-Jamstack-CICD
 
-Cliquer sur **Fork** pour créer une copie personnelle.
+Cliquer sur Fork pour créer une copie personnelle.
 
-**Étape 2 – Clone**
+### Étape 2 – Clone
 
-Remplacer `VOTRE-IDENTIFIANT` par son identifiant GitHub :
+Remplacer VOTRE-IDENTIFIANT par son identifiant GitHub :
 
 ```bash
 git clone https://github.com/VOTRE-IDENTIFIANT/StaticForge-Jamstack-CICD.git
-```
-
-Accéder au projet :
-
-```bash
 cd StaticForge-Jamstack-CICD
 ```
 
-**Étape 3 – Installer les dépendances**
+### Étape 3 – Basculer sur dev
+
+```bash
+git fetch origin
+git switch --track origin/dev
+```
+
+### Étape 4 – Installer les dépendances
 
 ```bash
 npm install
 ```
 
-**Étape 4 – Démarrer le backend**
-
-Dans un premier terminal :
+### Étape 5 – Démarrer le backend
 
 ```bash
 npm run dev:api
 ```
 
-**Étape 5 – Démarrer le frontend**
+### Étape 6 – Démarrer le frontend
 
 Dans un deuxième terminal :
 
@@ -110,22 +106,18 @@ Dans un deuxième terminal :
 npm run dev:frontend
 ```
 
-Accéder à l'application :
+Application : http://localhost:5173
 
-http://localhost:5173
+API : http://localhost:3000/api/health
 
-API :
+## 6. Informations
 
-http://localhost:3000/api/health
+**Organisme :** Santou AI Lab
 
-## 6. Dépôt de référence
+**Encadrement :** Alimou DIALLO
 
-- **Organisme :** Santou AI Lab
-- **Encadrement :** Alimou DIALLO
-- **GitHub :** https://github.com/Santoudllo
+**Dépôt GitHub :**
+https://github.com/Santoudllo/StaticForge-Jamstack-CICD
 
-Les objectifs, les missions techniques, les livrables et les critères d'évaluation sont détaillés dans le fichier `CAHIER-DES-CHARGES.md`.
+Les missions techniques, les livrables et les critères d'évaluation seront détaillés dans le cahier des charges.
 
----
-
-*Projet pédagogique – DevOps, CI/CD et industrialisation logicielle.*
