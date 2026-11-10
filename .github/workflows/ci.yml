@@ -1,0 +1,30 @@
+name: CI - StaticForge
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm install
+      - name: Lint
+        run: npm run lint
+      - name: Test backend
+        run: npm run test:coverage
+      - name: Build frontend and static site
+        run: npm run build
+      - name: Upload generated site
+        uses: actions/upload-artifact@v4
+        with:
+          name: staticforge-site
+          path: public/generated/

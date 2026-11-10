@@ -1,0 +1,8 @@
+const express = require('express');
+const controller = require('../controllers/pages.controller');
+
+const router = express.Router();
+router.get('/', controller.list);
+router.get('/:slug', controller.getBySlug);
+
+module.exports = router;
